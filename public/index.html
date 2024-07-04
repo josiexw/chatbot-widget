@@ -27,7 +27,52 @@
     <title>React App</title>
   </head>
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <script>
+      (function() {
+    // Function to load a script
+    function loadScript(src, callback) {
+      var script = document.createElement('script');
+      script.src = src;
+      script.async = true;
+      script.onload = callback;
+      document.head.appendChild(script);
+    }
+  
+    // Load React and ReactDOM if not already loaded
+    if (!window.React || !window.ReactDOM) {
+      loadScript('https://unpkg.com/react/umd/react.production.min.js', function() {
+        loadScript('https://unpkg.com/react-dom/umd/react-dom.production.min.js', function() {
+          loadChatbotWidget();
+        });
+      });
+    } else {
+      loadChatbotWidget();
+    }
+  
+    function loadChatbotWidget() {
+      // Create a script element to load the widget script
+      var script = document.createElement('script');
+      script.src = 'https://josiexw.github.io/chatbot-widget/chatbot-widget.js';
+      script.async = true;
+      script.onload = function() {
+        // Once the script is loaded, initialize the chatbot
+        var chatbotContainer = document.createElement('div');
+        chatbotContainer.id = 'chatbot-container';
+        document.body.appendChild(chatbotContainer);
+  
+        // Assuming your widget exposes a global initialization function
+        if (window.ChatbotWidget) {
+          ReactDOM.render(
+            React.createElement(window.ChatbotWidget.default),
+            document.getElementById('chatbot-container')
+          );
+        }
+      };
+      document.head.appendChild(script);
+    }
+  })();
+  
+    </script>
     <div id="root"></div>
     <!--
       This HTML file is a template.
