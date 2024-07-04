@@ -1,1 +1,38 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"/><link rel="icon" href="%PUBLIC_URL%/favicon.ico"/><meta name="viewport" content="width=device-width,initial-scale=1"/><meta name="theme-color" content="#000000"/><meta name="description" content="Web site created using create-react-app"/><link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png"/><link rel="manifest" href="%PUBLIC_URL%/manifest.json"/><title>React App</title><script defer="defer" src="/chatbot-widget.js"></script></head><body><noscript>You need to enable JavaScript to run this app.</noscript><div id="root"></div></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <link rel="icon" href="%PUBLIC_URL%/favicon.ico"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="theme-color" content="#000000"/>
+  <meta name="description" content="Web site created using create-react-app"/>
+  <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png"/>
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json"/>
+  <title>React App</title>
+</head>
+<body>
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div id="root"></div> <!-- This div is typically used by React for rendering -->
+
+  <!-- Container for the chatbot widget -->
+  <div id="chatbot-container"></div>
+
+  <!-- Script to load chatbot-widget.js and initialize -->
+  <script defer src="/chatbot-widget.js"></script>
+  <script>
+    // Wait for the chatbot-widget.js script to load
+    document.addEventListener('DOMContentLoaded', function() {
+      // Ensure ChatbotWidget is loaded and initialized correctly
+      if (typeof ChatbotWidget !== 'undefined') {
+        // Initialize and render the ChatbotWidget component
+        ReactDOM.render(
+          React.createElement(ChatbotWidget.default),
+          document.getElementById('chatbot-container')
+        );
+      } else {
+        console.error('Error: ChatbotWidget script not loaded.');
+      }
+    });
+  </script>
+</body>
+</html>
