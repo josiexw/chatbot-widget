@@ -27,7 +27,7 @@ def save_contact(user_input, new_thread_id):
         return
 
     try:
-        with open(file_path, 'rb') as f:
+        with open(file_path, 'r') as f:
             existing_data = f.read()
     except FileNotFoundError:
         existing_data = ''
@@ -49,7 +49,7 @@ def save_contact(user_input, new_thread_id):
         global thread_id
         thread_id = existing_id
     else:
-        with open(file_path, 'wb') as f:
+        with open(file_path, 'a') as f:
             f.write(new_data)
 
 def get_instructions():
