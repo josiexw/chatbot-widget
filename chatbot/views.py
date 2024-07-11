@@ -52,6 +52,10 @@ def save_contact(user_input, new_thread_id):
         with open(file_path, 'a') as f:
             f.write(new_data)
 
+def remove_source(text):
+    text = str(text)
+    return re.sub(r'\【.*?\】', '', text).strip()
+
 def get_instructions():
     file_path = os.path.join(os.path.dirname(__file__), 'files/instructions.txt')
     try:
@@ -108,7 +112,7 @@ def send_message(request):
         last_message = next((msg for msg in message_list.data if msg.run_id == run.id and msg.role == 'assistant'), None)
 
         if last_message:
-            return JsonResponse({'response': last_message.content[0].text.value.replace('【0:knowledge.txt†source】', '')})
+            return JsonResponse({'response': remove_source(last_message.content[0].text.value)})
         else:
             return HttpResponse(status=500, content='No response from the assistant.')
 
