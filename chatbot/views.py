@@ -54,7 +54,9 @@ def save_contact(user_input, new_thread_id):
 
 def remove_source(text):
     text = str(text)
-    return re.sub(r'\【.*?\】', '', text).strip()
+    text = re.sub(r'\【.*?\】', '', text)
+    text = re.sub(r'\*+', '', text)
+    return text.strip()
 
 def get_instructions():
     file_path = os.path.join(os.path.dirname(__file__), 'files/instructions.txt')
