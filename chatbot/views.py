@@ -58,14 +58,21 @@ def remove_source(text):
     text = re.sub(r'\*+', '', text)
     return text.strip()
 
-def get_instructions():
-    file_path = os.path.join(os.path.dirname(__file__), 'files/instructions.txt')
+def parse_button_map():
+    button_map = {}
+    file_path = os.path.join(os.path.dirname(__file__), 'files/buttons.txt')
     try:
         with open(file_path, 'rb') as f:
-            instructions = f.read()
+            content = f.read().strip().decode('utf-8')
     except FileNotFoundError:
         return HttpResponse(status=500, content=f"No instructions file found.")
-    return str(instructions)
+    entries = content.split('=====')
+    for entry in entries:
+        key, value = entry.split('===')
+        button_map[key.strip()] = value.strip()
+    return button_map
+
+button_map = parse_button_map()
 
 @csrf_exempt
 def get_assistant(request):
@@ -73,7 +80,6 @@ def get_assistant(request):
     global assistant_id, vector_store_id
 
     try:
-        assistant = client.beta.assistants.retrieve('asst_pWdX4pmMFCbAhdogpiIGouhT')
         assistant_id = 'asst_pWdX4pmMFCbAhdogpiIGouhT'
         return JsonResponse({'assistant_id': 'asst_pWdX4pmMFCbAhdogpiIGouhT'})
 
@@ -102,19 +108,23 @@ def send_message(request):
         if '@' in user_input:
             save_contact(user_input, thread_id)
 
-        run = client.beta.threads.runs.create(thread_id=thread_id, assistant_id=assistant_id)
+        if user_input in button_map:
+            answer = button_map[user_input]
+        else:
+            run = client.beta.threads.runs.create(thread_id=thread_id, assistant_id=assistant_id)
 
-        while True:
-            response = client.beta.threads.runs.retrieve(run_id=run.id, thread_id=thread_id)
-            if response.status not in ["in_progress", "queued"]:
-                break
-            time.sleep(2)
+            while True:
+                response = client.beta.threads.runs.retrieve(run_id=run.id, thread_id=thread_id)
+                if response.status not in ["in_progress", "queued"]:
+                    break
+                time.sleep(2)
 
-        message_list = client.beta.threads.messages.list(thread_id)
-        last_message = next((msg for msg in message_list.data if msg.run_id == run.id and msg.role == 'assistant'), None)
+            message_list = client.beta.threads.messages.list(thread_id)
+            last_message = next((msg for msg in message_list.data if msg.run_id == run.id and msg.role == 'assistant'), None)
+            answer = remove_source(last_message.content[0].text.value)
 
-        if last_message:
-            return JsonResponse({'response': remove_source(last_message.content[0].text.value)})
+        if answer:
+            return JsonResponse({'response': answer})
         else:
             return HttpResponse(status=500, content='No response from the assistant.')
 

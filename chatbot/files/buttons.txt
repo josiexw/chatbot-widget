@@ -1,0 +1,148 @@
+ID Card and Card Reader
+===
+ID cards are an affordable and convenient way to control access for employees or users. They are popular in offices, schools, and dormitories. 
+
+Acoris ID Cards: 
+1. Permanent - Issued on arrival, used during the stay, and returned on departure. 
+2. Personalized - Can include customer’s name or photo, ordered in advance or on arrival. 
+3. Prepayment - Allows partial deposit to pay for services. 
+
+Popular Card Readers: 
+1. USB Dual Band Card Register Reader (AR-725-R): Plug-and-play, no driver needed, supports EM, Mifare, Desfire, Ultra Light formats, compatible with Windows XP, 7, 10. 
+2. Card Reader/Writer (AR-725-U series): Desktop or wall-mounted, supports Mifare Ultralight, Classic, DESFire EV1, NFC, easy USB connection. 
+3. Long Range Wiegand Reader (AR-661UG): Outdoor use, 4-6 meters read range, ideal for parking, compatible with standard Access Control Systems. 
+4. Mini Dual Frequency & Output Interface Reader (AR-101 series): Supports 125kHz and 13.56MHz, EM, Mifare, Desfire tags, Wiegand and RS485 interfaces, suitable for lift control. 
+5. MIFARE Card Programmer (AR-725-P): Controlled via PC software, supports SOYAL Open System Rules, advanced features like expiration setup and card encryption. 
+
+These products meet a variety of needs, from simple card registration to advanced access control with long-range reading and encryption.
+=====
+Keychains (NFC tags)
+===
+Acoris offers keychains and NFC tags for access control, resource management, and event coordination. These tools can be used for student transportation, school cafeterias, copying services, and more, providing convenience and security. 
+
+Features: 
+- NFC-enabled devices: Support contactless data transmission. 
+- Versatile applications: Suitable for managing rooms, events, inventory, and other resources. 
+- Comprehensive system: Streamlines operations and enhances efficiency across various settings. 
+
+Acoris keychains and NFC tags are valuable for organizations aiming to improve operational effectiveness and security.
+=====
+Cell Phones with NFC Integrated chip
+===
+Acoris offers NFC technology products for access control and data transmission. Key products include: 
+
+1. AR-725-N USB-HID Dual-Band Reader: 
+- Supports NFC 
+- Keyboard simulation 
+- Plug and Play, no driver needed 
+- Compatible with Windows XP, 7, and 10 
+
+2. AR-837-E Series Devices: 
+- Support NFC, Mifare Classic, DESFire EV1/EV2 
+- Dual frequencies (125kHz and 13.56MHz) 
+- Secure RS-485 communication 
+- Operates in standalone and network modes 
+- Controls access with NFC-enabled mobile phones and tags 
+
+These NFC-enabled products enhance security systems with modern technology.
+=====
+Pin Pad
+===
+Acoris offers versatile pin pad options for various security and access control needs:
+
+1. Illuminated Touch Keypad: Allows access via swiping tags or entering PINs, with direct configuration through the keypad.
+
+2. Keypad-less: Access by swiping tags, edited with an Authorization or Master Card, no numerical keypad.
+
+3. Illuminated Touch Keypad Invisible: Features an invisible keypad, configured with an External Numerical Keypad and an Authorization or Master Card.
+
+4. Access Mode Variations: Flexible methods include card only, card or PIN, card + PIN, and first access by one-time PIN followed by card access—ideal for hotels or B&Bs.
+
+These options demonstrate the adaptability of Acoris's pin pads for both basic and high-security applications.
+=====
+Electromagnetic door lock
+===
+Acoris provides a range of electromagnetic door lock solutions integrated into their access control systems:
+
+1. Magnetic Lock (AR-0600M): A high-security locking mechanism for doors, ensuring secure locking in various environments.
+
+2. Electric Bolt Lock (AR-1207 Series): Offers secure locking for doors with electric bolt functionality, providing enhanced security.
+
+3. Cabinet Lock (AR-1211-P/AR-1213-P): Designed for securing cabinets, this lock offers added security for sensitive or valuable items.
+
+4. Electric Strike (AR-YS-130NO/AR-YS-131NO): This electric strike lock allows for controlled access, easily integrated into the existing access control systems.
+
+These locks are part of Acoris’s secure access solutions, ensuring safety and security across various applications, from doors to cabinets, adapting to the needs of secure facilities and premises.
+=====
+Physical door lock
+===
+Acoris offers advanced physical door locks with a variety of features:
+
+1. AR-323-D Smart Proximity Door Controller:
+- Integrates access controller, door lock, and handle
+- Easy installation
+- Access via RFID tags, PINs, or both
+- Emergency mechanical key access
+
+2. High-Security Features:
+- Encryption for enhanced security
+- No additional tools or programming needed
+- Suitable for high-security demands
+
+3. Versatile Access Options for Bed and Breakfasts:
+- Access by card, card or PIN, card + PIN
+- First access by one-time PIN followed by card access
+- Perfect for temporary guest access
+
+These locking solutions offer strength, convenience, and versatility for various applications.
+=====
+Turnstiles
+===
+Acoris’s turnstile systems offer advanced access management features:
+
+1. Count and Display On-Site Numbers:
+- Supports single or dual direction turnstiles
+- Integrated with a multi-door control panel
+- Anti-passback for accurate tracking
+- Displays total number of people and details via 701Client software
+
+2. Scalable Structure:
+- Easily expand user capacity
+- Add SOYAL Multi-Door Control Series hardware without replacing existing units
+
+3. Integration and Networking:
+- Networked with PCs using SOYAL software
+- Options for anti-cloning and encryption
+
+These features ensure Acoris turnstiles are versatile and secure for various environments, including offices, factories, and schools.
+=====
+Gateway accounting
+===
+Acoris's gateway accounting software integrates various service operations into one unified system, streamlining management, reducing costs, and optimizing resources. It covers functions such as parking, access control, electric car charging, inventory accounting, and catering payments.
+
+Key Benefits:
+- Comprehensive Management: Centralizes operational processes for efficiency.
+- Seamless Integration: Works with existing accounting programs and business systems.
+- Detailed Reporting: Provides usage reports and supports CRM tools, analytics, and marketing efforts.
+
+This software enhances security, efficiency, and convenience for managers, employees, and customers.
+=====
+Employee work time management
+===
+The Acoris Employee Work Time Management Software is designed to streamline the management of employee attendance and work hours. Key features include:
+
+1. Time Tracking: Accurately records employee work hours, helping to manage time effectively.
+2. Access Control Integration: Can be integrated with access control systems to monitor and manage entry and exit times, enhancing security and accountability.
+3. Data Analysis: Provides detailed use statistics for analysis, aiding in decision-making and resource planning.
+4. Ease of Use: Offers a user-friendly interface for both employees and administrators.
+=====
+Inventory control
+===
+Acoris offers a comprehensive Inventory Control Software designed to efficiently manage and monitor tools, equipment, and other inventory items. Key features include:
+
+1. Real-Time Monitoring: Track the location and usage of tools and inventory in real-time, ensuring better control and management.
+2. Assignment and Administration: Conveniently assign tools to specific projects or locations and manage all available equipment.
+3. Maintenance Notifications: Receive alerts for maintenance needs, insurance, technical services, and certificate renewals.
+4. Easy Installation and Use: The software is user-friendly, offering quick installation and intuitive operation.
+5. Integration Capabilities: Compatible with accounting, business management, and CRM systems, enhancing overall business operations.
+6. Versatility: Suitable for various industries including construction, agriculture, and services, with a wide range of modern identifiers and scanners available​​.
