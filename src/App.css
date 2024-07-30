@@ -1,0 +1,8 @@
+/* src/App.css */
+.chat-container {
+    position: fixed;
+    z-index: 9998; /* High value to ensure it's above other elements */
+    background: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  

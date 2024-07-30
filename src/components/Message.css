@@ -1,0 +1,44 @@
+/* src/components/Message.css */
+.message-container {
+  margin: 8px;
+}
+
+.suggested-message {
+  display: inline-block;
+  background-color: none;
+  padding: 10px;
+  border-radius: 18px;
+  color: #4c4c4c;
+  max-width: 80%;
+  word-wrap: break-word;
+  text-align: left;
+  border: 2px solid #4c4c4c;
+  cursor: pointer;
+  z-index: 9999;
+}
+
+.suggested-message:hover {
+  background-color: #cecece;
+}
+
+.user-message {
+  display: inline-block;
+  background-color: #114694;
+  padding: 10px;
+  border-radius: 18px;
+  color: white;
+  max-width: 80%;
+  word-wrap: break-word;
+  text-align: left;
+}
+
+.other-message {
+  display: inline-block;
+  background-color: #6e7074;
+  padding: 10px;
+  border-radius: 18px;
+  color: white;
+  max-width: 80%;
+  word-wrap: break-word;
+  text-align: left;
+}

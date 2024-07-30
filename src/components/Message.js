@@ -1,20 +1,19 @@
-// src/components/Message.js
+import './Message.css';
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Message = ({ message }) => {
+const Message = ({ message, onMessageClick }) => {
+  const handleClick = () => {
+    if (message.isSuggested) {
+      onMessageClick(message.content);
+    }
+  };
+
+  const messageClass = message.isSuggested ? 'suggested-message' : (message.isUser ? 'user-message' : 'other-message');
+
   return (
-    <div style={{ textAlign: message.isUser ? 'right' : 'left', margin: '8px' }}>
-      <div style={{ 
-        display: 'inline-block', 
-        backgroundColor: message.isUser ? '#114694' : '#6e7074', 
-        padding: '10px', 
-        borderRadius: '10px', 
-        color: 'white',
-        maxWidth: '80%',
-        wordWrap: 'break-word',
-        textAlign: 'left'
-      }}>
+    <div className="message-container" onClick={handleClick} style={{ textAlign: message.isUser ? 'right' : 'left' }}>
+      <div className={messageClass}>
         {message.content.split('\n').map((text, index) => (
           <React.Fragment key={index}>
             {text}
@@ -30,7 +29,9 @@ Message.propTypes = {
   message: PropTypes.shape({
     isUser: PropTypes.bool.isRequired,
     content: PropTypes.string.isRequired,
+    isSuggested: PropTypes.bool
   }).isRequired,
+  onMessageClick: PropTypes.func.isRequired,
 };
 
 export default Message;

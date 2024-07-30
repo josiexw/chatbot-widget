@@ -1,6 +1,7 @@
 const path = require('path');
 
 module.exports = {
+  mode: "production",
   entry: './src/App.js',
   output: {
     filename: 'chatbot-widget.js',
@@ -20,7 +21,11 @@ module.exports = {
             presets: ['@babel/preset-env', '@babel/preset-react'],
           },
         }
-      }
+      },
+      {
+        test: /\.css$/i,
+        use: ["style-loader", "css-loader"],
+      },
     ]
   },
   externals: {

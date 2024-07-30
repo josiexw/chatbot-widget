@@ -9,8 +9,8 @@ const ChatBubbleIcon = ({ handleClick }) => {
       onClick={handleClick}
       style={{
         position: 'fixed',
-        bottom: '16px',
-        right: '16px',
+        bottom: '80px',
+        right: '40px',
         backgroundColor: '#114694',
         color: 'white',
         borderRadius: '50%',
