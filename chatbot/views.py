@@ -93,6 +93,7 @@ def send_message(request):
 
     data = json.loads(request.body)
     user_input = data.get('input')
+    thread_id = data.get('threadId')
 
     try:
         if not thread_id:
@@ -124,7 +125,9 @@ def send_message(request):
             answer = remove_source(last_message.content[0].text.value)
 
         if answer:
-            return JsonResponse({'response': answer})
+            return JsonResponse({'response': answer,
+                                 'threadId': thread_id
+                                 })
         else:
             return HttpResponse(status=500, content='No response from the assistant.')
 
